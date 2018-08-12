@@ -12,10 +12,11 @@ ECMAScript规范为所有函数都包含两个方法(这两个方法非继承而
     }
  
   这两个方法的参数不同 ，但作用是一样的
-     function f(c,n){
-          return test.call(this,a)
-     }
-        console.log(f(2,8)) //16
+  
+         function f(c,n){
+              return test.call(this,a)
+         }
+            console.log(f(2,8)) //16
 
     function g(v,n){
         return test.apply(this,arguments)
@@ -25,7 +26,7 @@ ECMAScript规范为所有函数都包含两个方法(这两个方法非继承而
      
      
 
-    改变函数作用域
+ 改变函数作用域
     
         var name = '小白';
         var obj = {name:'小红'};
