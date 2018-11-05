@@ -2,8 +2,11 @@
 call 和 apply 
 
 
-  call()
+  call()apply都是修改this指向的，
+      区别是：call需要把实参按照形参的顺序个数传进去
+             apply  只需要传一个数组
    
+   1） call
       function Person(name,age,sex){
          this.name=name;
          this.age=age;
@@ -18,10 +21,35 @@ call 和 apply
          this.tel=tel;
          this.color=color;
       }
-
      var student=new Student("张三",22,"男",138,"red")
+     
     //张三-22-男-138-red
     console.log(student.name+"-"+student.age+"-"+student.sex+"-"+student.tel+"-"+student.color)
+
+ 2） apply
+ 
+     function   Wheel(size,width,heigth){
+      	this.size=size;
+      	this.width=width;
+      	this.heigth=heigth;
+      }
+       
+     function  SteeringWheel(color,style){
+     	this.color=color;
+     	this.style=style;
+     }
+        
+     function Factory(size,width,heigth,color,style){
+        	Wheel.apply(this,[size,width,heigth]);
+        	SteeringWheel.apply(this,[color,style])
+        }   
+       var factory=new Factory(120,100,90,"red","越野")
+       
+     //  120-100-90-red-越野
+    console.log(factory.size+"-"+factory.width+"-"+factory.heigth+"-"+factory.color+"-"+factory.style)
+       
+
+
 
 
 
