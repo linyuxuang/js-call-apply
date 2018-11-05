@@ -7,12 +7,12 @@ call 和 apply
              apply  只需要传一个数组
    
    1） call
+   
       function Person(name,age,sex){
          this.name=name;
          this.age=age;
          this.sex=sex;
       }
-
     function Student(name,age,sex,tel,color){
      //  下面new Student后就在这里形成了   var this={} 
       Person.call(this,name,age,sex)   //call 调用别人的方法或者属性 完成自己的功能
