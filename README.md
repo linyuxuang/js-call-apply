@@ -5,6 +5,8 @@ call 和 apply
   call()apply都是修改this指向的，
       区别是：call需要把实参按照形参的顺序个数传进去
              apply  只需要传一个数组
+             
+     apply:方法能劫持另外一个对象的方法，继承另外一个对象的属性.              
    
    1） call
    
