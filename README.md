@@ -90,6 +90,14 @@ ECMAScript规范为所有函数都包含两个方法(这两个方法非继承而
             alert(a1);  //6     
             alert(a2);  //2
 
+  
+            function add(a,n){
+               return  sub.call(this,2,4) //-2
+             }
+            function sub(a,n){
+                 return a-n
+            } 
+
             /*call的用法*/
             var a1 = add.call(sub,4,2);
             
